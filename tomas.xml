@@ -1,1 +1,113 @@
-<xml xmlns="http://www.w3.org/1999/xhtml"></xml>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="sensor_object" id="68" x="-144" y="24">
+    <field name="OBJECT">RIGHTSIDE</field>
+  </block>
+  <block type="expansion_servopower" id="80" x="-132" y="49">
+    <field name="SERVO">ON</field>
+    <next>
+      <block type="variables_set" id="82" inline="true">
+        <field name="VAR">item</field>
+        <next>
+          <block type="multimedia_displaybmp" id="89">
+            <field name="BMP"></field>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="comment_comment" id="29" x="-505" y="104">
+    <field name="TEXT">ff</field>
+  </block>
+  <block type="math_single" id="102" inline="true" x="-123" y="141">
+    <field name="OP">ABS</field>
+  </block>
+  <block type="multimedia_playwav" id="109" x="-124" y="174">
+    <field name="WAV"></field>
+    <next>
+      <block type="controls_whileUntil" id="116" inline="false">
+        <field name="MODE">WHILE</field>
+        <next>
+          <block type="led_select" id="126" inline="true">
+            <field name="ACTION">ON</field>
+            <next>
+              <block type="expansion_exp2power" id="134">
+                <field name="SERVO">ON</field>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="multimedia_pollwav" id="147" x="-101" y="318"></block>
+  <block type="expansion_elevation" id="153" inline="true" x="-103" y="343"></block>
+  <block type="math_bitwise" id="160" inline="true" x="-92" y="381">
+    <field name="OP">AND</field>
+  </block>
+  <block type="expansion_servopower" id="166" x="-103" y="413">
+    <field name="SERVO">ON</field>
+  </block>
+  <block type="movement_reverse" id="176" x="-78" y="440"></block>
+  <block type="robot_delay" id="187" inline="true" x="-99" y="463">
+    <next>
+      <block type="movement_right" id="197">
+        <next>
+          <block type="movement_forward" id="207"></block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="procedures_defnoreturn" id="211" x="-113" y="563">
+    <mutation></mutation>
+    <field name="NAME">subroutineName</field>
+  </block>
+  <block type="movement_reverse" id="221" x="-90" y="619">
+    <next>
+      <block type="multimedia_playwav" id="228">
+        <field name="WAV"></field>
+      </block>
+    </next>
+  </block>
+  <block type="math_shift" id="235" inline="true" x="-99" y="677">
+    <field name="OP">LEFT</field>
+  </block>
+  <block type="movement_forward" id="277" x="-109" y="707">
+    <next>
+      <block type="movement_forward" id="287">
+        <next>
+          <block type="movement_forward" id="297"></block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="procedures_defnoreturn" id="302" x="-157" y="786">
+    <mutation></mutation>
+    <field name="NAME">subroutineName2</field>
+  </block>
+  <block type="expansion_elevation" id="320" inline="true" x="-150" y="838">
+    <next>
+      <block type="multimedia_playwav" id="332">
+        <field name="WAV"></field>
+        <next>
+          <block type="movement_forward" id="342"></block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="sensor_object" id="349" x="-159" y="932">
+    <field name="OBJECT">LEFTFRONT</field>
+  </block>
+  <block type="sensor_button" id="356" x="-162" y="961">
+    <field name="OBJECT">ENTER</field>
+  </block>
+  <block type="controls_whileUntil" id="374" inline="false" x="-157" y="986">
+    <field name="MODE">UNTIL</field>
+    <next>
+      <block type="movement_forward" id="385">
+        <next>
+          <block type="robot_delay" id="398" inline="true"></block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
